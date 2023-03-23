@@ -18,7 +18,7 @@ To create a LuisIntent object we need 3 following  parameters :
 predict(self, utterance) ,the LuisIntent method take the utternece : string as parameter .
 
 predict() return 
-#### data : json format , score :float , town Name :sring
+#### data : json format , score :float , town Name :list of string
 
 for predicting we need to get the request using the get() <requests> library function, moreover 
 this last function need  this params :
@@ -41,7 +41,8 @@ the response of the get request have a json format,so then we can any Intent val
 
 ## For the test using Pytest
 
-![image](https://user-images.githubusercontent.com/73289762/227198840-75dfb085-cb2f-4d74-a995-84e5372fbe36.png)
+![image](https://user-images.githubusercontent.com/73289762/227201780-d771f491-fc17-448a-bf2e-4a9705947782.png)
+
 
 we see that the test 100% passed 
 
