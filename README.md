@@ -7,31 +7,33 @@ after reciving the response in JSON format we can observe that my intent is 'get
 
 Code Detail :
 
-My class to retrieve intent from the Machine Learning LUIS engine named "LuisIntent"
-to create a LuisIntent object we need 3 following  parameters :
+My class to retrieve intent from the Machine Learning LUIS engine named "LuisIntent".
+To create a LuisIntent object we need 3 following  parameters :
 
-app id : string 
-subscription key :string
-endpoint : string
+#### app id : string 
+#### subscription key :string
+#### endpoint : string
 
-and return data, score , town Name
+and return 
+
+#### data : json format , score :float , town Name :sring
 
 predict(self, utterance) ,the LuisIntent method take the utternece : string as parameter .
 for predicting we need to get the request using the get() <requests> library function, moreover 
 this last function need  this params :
 
-url= your endpoint+'/luis/prediction/v3.0/apps/'+your  app id+'/slots/staging/predict/'
+           - url= your endpoint+'/luis/prediction/v3.0/apps/'+your  app id+'/slots/staging/predict/'
 
-headers = {
-            'Ocp-Apim-Subscription-Key': subscription key
-        }
+           - headers = {
+                        'Ocp-Apim-Subscription-Key': subscription key
+                    }
 
-params = {
-            'verbose':{bolean},
-            'log':{bolean},
-            'show-all-intents':{bolean},
-            'query': {string}
-        } 
+           - params = {
+                        'verbose':{bolean},
+                        'log':{bolean},
+                        'show-all-intents':{bolean},
+                        'query': {string}
+                    } 
 
 
 the response of the get request have a json format,so then we can any Intent value 
