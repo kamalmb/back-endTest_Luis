@@ -14,11 +14,12 @@ To create a LuisIntent object we need 3 following  parameters :
 #### subscription key :string
 #### endpoint : string
 
-and return 
-
-#### data : json format , score :float , town Name :sring
 
 predict(self, utterance) ,the LuisIntent method take the utternece : string as parameter .
+
+predict() return 
+#### data : json format , score :float , town Name :sring
+
 for predicting we need to get the request using the get() <requests> library function, moreover 
 this last function need  this params :
 
