@@ -38,3 +38,10 @@ this last function need  this params :
 
 
 the response of the get request have a json format,so then we can any Intent value 
+
+## For the test using Pytest
+
+![image](https://user-images.githubusercontent.com/73289762/227198840-75dfb085-cb2f-4d74-a995-84e5372fbe36.png)
+
+we see that the test 100% passed 
+
