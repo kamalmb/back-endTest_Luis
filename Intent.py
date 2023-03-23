@@ -18,7 +18,11 @@ class LuisIntent:
             'query': utterance
         }
         url=self.endpoint+'/luis/prediction/v3.0/apps/'+self.app_id+'/slots/staging/predict/'
-        response = requests.get(url, params=params,headers=headers)
+        try :
+            response = requests.get(url, params=params,headers=headers)
+        except Exception as e:
+            print("[Errno {0}] {1}".format(e.errno, e.strerror))
+            
         data = json.loads(response.content.decode('utf-8-sig'))
         townName = data['prediction']['entities']['TownName']
         score = data['prediction']['intents']['getTowns']['score']
